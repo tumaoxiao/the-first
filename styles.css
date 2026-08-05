@@ -1,0 +1,66 @@
+:root{
+  --bg:#ffffff;
+  --fg:#222;
+  --accent:#0066cc;
+  --card:#f7f9fc;
+}
+[data-theme="dark"]{
+  --bg:#0f1720;
+  --fg:#e6eef8;
+  --accent:#57a6ff;
+  --card:#0b1220;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--fg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transition:background .25s, color .25s;
+}
+
+.container{max-width:960px;margin:0 auto;padding:16px}
+
+.site-header{
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 0;
+}
+.logo{margin:0;font-size:1.25rem}
+.nav{margin-left:auto;display:flex;gap:12px}
+.nav a{color:var(--fg);text-decoration:none;padding:6px;border-radius:6px}
+.nav a:hover{background:rgba(0,0,0,0.04)}
+.btn{background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:6px;cursor:pointer}
+.btn.small{padding:6px 8px;font-size:.9rem}
+
+.hero{padding:28px 0;text-align:center}
+.hero h2{margin:.25rem 0}
+.hero .quote{margin-top:12px;font-style:italic;color:var(--accent)}
+
+.features{padding:18px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 1px 2px rgba(0,0,0,0.03)}
+
+.contact{padding:18px 0}
+.form{display:grid;gap:8px;max-width:640px}
+.form label{display:flex;flex-direction:column;font-size:.95rem}
+.form input,.form textarea{padding:8px;border:1px solid rgba(0,0,0,0.12);border-radius:6px;background:transparent;color:var(--fg)}
+.result{margin-top:8px;color:var(--accent)}
+
+.site-footer{padding:14px 0;text-align:center;border-top:1px solid rgba(0,0,0,0.04);margin-top:24px;font-size:.9rem}
+
+/* Responsive */
+@media (max-width:800px){
+  .cards{grid-template-columns:1fr; }
+  .nav{display:none}
+  .header-inner{justify-content:space-between}
+}
