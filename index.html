@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>静态前端示例</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">静态示例站</h1>
+      <nav class="nav">
+        <a href="#home">首页</a>
+        <a href="#features">功能</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <button id="themeToggle" class="btn small">切换主题</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <h2>欢迎！</h2>
+      <p>这是一个简单的静态页面示例，包含响应式布局、交互和主题切换。</p>
+      <div class="hero-actions">
+        <button id="quoteBtn" class="btn">显示随机名言</button>
+      </div>
+      <p id="quote" class="quote"></p>
+    </section>
+
+    <section id="features" class="features">
+      <h3>特色</h3>
+      <div class="cards">
+        <article class="card">
+          <h4>响应式</h4>
+          <p>在桌面与移动设备上均有良好体验。</p>
+        </article>
+        <article class="card">
+          <h4>交互</h4>
+          <p>按钮点击、表单模拟提交、主题切换等交互示例。</p>
+        </article>
+        <article class="card">
+          <h4>易部署</h4>
+          <p>静态文件，可直接部署到 GitHub Pages、Netlify 等。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h3>联系</h3>
+      <form id="contactForm" class="form">
+        <label>姓名
+          <input type="text" name="name" required />
+        </label>
+        <label>邮箱
+          <input type="email" name="email" required />
+        </label>
+        <label>留言
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn">发送（模拟）</button>
+      </form>
+      <p id="formResult" class="result"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2026 静态示例站 · 演示用
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
